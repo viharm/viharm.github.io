@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8 />
+    <meta charset="UTF-8" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Lib/Style.inc.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
@@ -21,96 +22,205 @@
       <div id="dv_PageHeader">
         <div class="panel panel-default">
           <div class="panel-body">
-            <img class="cs_Banner" src="http://www.gravatar.com/avatar/ad7949dd6f25efe46f3dd10cba9b91fa" alt="viharm" title="{viharm" />
+            <img class="cs_Banner img-responsive center-block" src="http://www.gravatar.com/avatar/ad7949dd6f25efe46f3dd10cba9b91fa" alt="viharm" title="{viharm" />
           </div>
         </div>
       </div>
       <div id="div__PageNav">
         <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav__Page">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span> 
-                </button>
-                <a class="navbar-brand" href="index.html">Coding standards</a>
-              </div>
-              <div class="collapse navbar-collapse" id="nav__Page">
-                <ul class="nav navbar-nav navbar-right">
-                  <li>
-                    <a href="#id_Layout">
-                      <span class="glyphicon glyphicon-home"></span>
-                      Layout
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#id_Semantics">
-                      <span class="glyphicon glyphicon-plus"></span>
-                      Semantics
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#id_Formatting">
-                      <span class="glyphicon glyphicon-cog"></span>
-                      Formatting
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#id_Documenting">
-                      <span class="glyphicon glyphicon-cog"></span>
-                      Documenting
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>        
-          </form>
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav__Page">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+              </button>
+              <a class="navbar-brand" href="index.html">Coding standards</a>
+            </div>
+            <div class="collapse navbar-collapse" id="nav__Page">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="#id_Files">
+                    <span class="glyphicon glyphicon-duplicate"></span>
+                    Files
+                  </a>
+                </li>
+                <li>
+                  <a href="#id_Layout">
+                    <span class="glyphicon glyphicon-th-large"></span>
+                    Layout
+                  </a>
+                </li>
+                <li>
+                  <a href="#id_Formatting">
+                    <span class="glyphicon glyphicon-indent-left"></span>
+                    Formatting
+                  </a>
+                </li>
+                <li>
+                  <a href="#id_Semantics">
+                    <span class="glyphicon glyphicon-barcode"></span>
+                    Semantics
+                  </a>
+                </li>
+                <li>
+                  <a href="#id_Documenting">
+                    <span class="glyphicon glyphicon-book"></span>
+                    Documenting
+                  </a>
+                </li>
+                <li>
+                  <a href="#id_Packaging">
+                    <span class="glyphicon glyphicon-compressed"></span>
+                    Packaging
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
       <div id="div__PageBody">
-      <section id="id_Layout">
-        <h3>Layout</h3>
-        <p>
-          Description of layout here
-        </p>
-      <section>
-      <section id="id_Semantics">
-        <h3>Semantics</h3>
-        <p>
-          Description of semantics here
-        </p>
-        <h4>Logic</h4>
-        <p>
-          Description of Logic here
-        </p>
-        <h4>User interface</h4>
-        <p>
-          Description of UI here
-        </p>
-        <h4>Databases</h4>
-        <p>
-          Description of Databases here
-        </p>
-        <h4>File system</h4>
-        <p>
-          Description of File system here
-        </p>
-      <section>
-      <section id="id_Formatting">
-        <h3>Formatting</h3>
-        <p>
-          Description of formatting here
-        </p>
-      <section>
-      <section id="id_Documenting">
-        <h3>Documenting</h3>
-        <p>
-          Description of documenting here
-        </p>
-      <section>
+        <section id="id_Intro">
+          <p>
+            This document describes best practices for creating software.
+          </p>
+        </section>
+        <section id="id_Files">
+          <h3>Files</h3>
+          <p>
+            Description of files here
+          </p>
+          <dl class="dl-horizontal">
+            <dt>LICENSE</dt>
+            <dd>A plain text file containing the licence with the name of the copyright holder</dd>
+          </dl>
+          <dl class="dl-horizontal">
+            <dt>VERSION</dt>
+            <dd>
+              <p>A plain text file containing the version number of the package.</p>
+              <p>Use of <a href="http://semver.org/" target ="_blank">semantic versioning</a> is highly encouraged.</p>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal">
+            <dt>Quickstart</dt>
+            <dd>
+              <p>A plain text file containing a brief guide to get started.</p>
+              <p>This is typically the <code>README.md</code> file in most packages. If the application is small then this may contain the complete documentation.</p>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal">
+            <dt>Code</dt>
+            <dd>
+              <p>Files and folders as per the structure of the software/library</p>
+              <p>Use of the directory structure described later is highly encouraged.</p>
+            </dd>
+          </dl>
+          <p>
+            Directory layout of different applications and packages vary however the approach used is very similar.
+          </p>
+          <ul>
+            <li>LICENSE</li>
+            <li>VERSION</li>
+            <li>
+              Conf
+              <ul>
+                <li>Conf_App.inc.ext</li>
+                <li>Conf_Plugin.inc.ext</li>
+                <li>...</li>
+              </ul>
+            </li>
+            <li>
+              Lib
+              <ul>
+                <li>Common.function.inc.php</li>
+                <li>Specific.class.inc.php</li>
+                <li>...</li>
+              </ul>
+            </li>
+            <li>
+              Plugin
+              <ul>
+                <li>
+                  Render_Smarty
+                  <ul>
+                    <li>Render_Smarty.plugin.inc.php</li>
+                  <li>...</li>
+                  </ul>
+                </li>
+                <li>
+                  Scraper_Tvdb
+                  <ul>
+                    <li>Scraper_Tvdb.plugin.inc.php</li>
+                    <li>...</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section id="id_Layout">
+          <h3>Layout</h3>
+          <p>
+            Description of layout here
+          </p>
+        </section>
+        <section id="id_Formatting">
+          <h3>Formatting</h3>
+          <p>
+            Description of formatting here
+          </p>
+        </section>
+        <section id="id_Semantics">
+          <h3>Semantics</h3>
+          <p>
+            Description of semantics here
+          </p>
+          <h4>Logic</h4>
+          <p>
+            Description of Logic here
+          </p>
+          <h4>User interface</h4>
+          <p>
+            Description of UI here
+          </p>
+          <h4>Databases</h4>
+          <p>
+            Description of Databases here
+          </p>
+          <h4>File system</h4>
+          <p>
+            Description of File system here
+          </p>
+        </section>
+        <section id="id_Documenting">
+          <h3>Documenting</h3>
+          <p>
+            Description of documenting here
+          </p>
+        </section>
+        <section id="id_Packaging">
+          <h3>Packaging</h3>
+          <p>
+            Description of Packaging here
+          </p>
+        </section>
       </div>
       <div id="div__PageFooter">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            Copyright &copy; 2015, viharm
+            <a href="../LICENSE" target="_blank">
+              GNU AGPL v3
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+              <img class="pull-right" src="Lib/css3.footer.badge.png" alt="CSS 3" title="CSS 3" />
+            </a>
+            <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+              <img class="cl_Badge pull-right" src="Lib/html5.footer.badge.png" alt="HTML 5" title="Valid HTML 5" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </body>
