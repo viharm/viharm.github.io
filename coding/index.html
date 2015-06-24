@@ -187,21 +187,218 @@
         <section id="id_Semantics">
           <h3>Semantics</h3>
           <p>
-            Description of semantics here
+            Coding semantics play an important role in making the entire code consistent. If this practice is applied across teams and languages, Large pieces of code can be easily understood. Various aspects of coding fall under semantics; these can be logical variables, values, database tables, fields or even filesystem objects like files and directories. For the purpose of this document, each of these aspect will be referred to as an <i>item</i>.
           </p>
-          <h4>Logic</h4>
+          <h4>Formulation</h4>
           <p>
-            Description of Logic here
+            The semantic formulation of an item name involves splitting it into two distinct parts.
           </p>
-          <h4>User interface</h4>
+          <dl class="dl-horizontal">
+            <dt>Type prefix</dt>
+            <dd>A two character prefix indicating the type of item </dd>
+            <dt>Item name</dt>
+            <dd>Rational name of the item</dd>
+          </dl>
+            
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h5 class="panel-title">Type prefix</h5>
+                  </div>
+                  <div class="panel-body">
+                    Two characters, both lower case, describing the type of item, variable or object. Two characters provide 676 unique combinations, so should be plenty. Selection of these two characters is made by using the first two consonants in the type name. If already used, then the first and the third, and so on.
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h5 class="panel-title">Item name</h5>
+                  </div>
+                  <div class="panel-body">
+                    A short but descriptive name of the item, variable or object. Avoid abbreviations and standard names from language documentation. Use CamelCase for multi-word names. Use shorter forms of common words.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4>Examples</h4>
+          <p>
+            The following examples illustrate the formulation of an item name/reference.
+          </p>
+          <h5>Logic</h5>
+          <p>
+            Logic items include variables, objects and logic routines like classes, functions, methods and objects.
+          </p>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Nm">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Nm" aria-controls="id_Cp_Nm">
+                    <code>nm_</code>... : Number
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Nm" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Nm">
+                <div class="panel-body">
+                  Numerical variable (integer, float, etc.) 
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Bl">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Bl" aria-controls="id_Cp_Bl">
+                    <code>bl_</code>... : Boolean
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Bl" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Bl">
+                <div class="panel-body">
+                  Boolean variable (true/false, yes/no, 1/0, etc. )
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Sr">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Sr" aria-controls="id_Cp_Sr">
+                    <code>sr_</code>... : String
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Sr" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Sr">
+                <div class="panel-body">
+                  String variable (including numeric characters)
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Ag">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Ag" aria-controls="id_Cp_Ag">
+                    <code>ag_</code>... : Argument
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Ag" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Ag">
+                <div class="panel-body">
+                  Argument supplied to a function/method
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Rt">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Rt" aria-controls="id_Cp_Rt">
+                    <code>rt_</code>... : Return
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Rt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Rt">
+                <div class="panel-body">
+                  Return variable (all types including arrays, integer, float, etc.) 
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Ar">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Ar" aria-controls="id_Cp_Ar">
+                    <code>ar_</code>... : Array
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Ar" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Ar">
+                <div class="panel-body">
+                  Array variable (both associative and non-associative)
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Ky">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Ky" aria-controls="id_Cp_Ky">
+                    <code>ky_</code>... : Array key
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Ky" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Ky">
+                <div class="panel-body">
+                  Key for arrays (specifically for associative types).
+                  <br />
+                  There is still a question whether all arrays should be prefixed with <code>ky_</code> or with the type of variable they are. This is open for discussion.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Fn">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Fn" aria-controls="id_Cp_Fn">
+                    <code>fn_</code>... : Function
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Fn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Fn">
+                <div class="panel-body">
+                  Function or method
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Cl">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Cl" aria-controls="id_Cp_Cl">
+                    <code>cl_</code>... : Class
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Cl" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Cl">
+                <div class="panel-body">
+                  Class definitions
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Ob">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Ob" aria-controls="id_Cp_Ob">
+                    <code>ob_</code>... : Object
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Ob" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Ob">
+                <div class="panel-body">
+                  Object instance of class
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Vr">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Vr" aria-controls="id_Cp_Vr">
+                    <code>vr_</code>... : Unspecified
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Vr" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Vr">
+                <div class="panel-body">
+                  Unspecified variable type or category.
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5>User interface</h5>
           <p>
             Description of UI here
           </p>
-          <h4>Databases</h4>
+          <h5>Databases</h5>
           <p>
             Description of Databases here
           </p>
-          <h4>File system</h4>
+          <h5>File system</h5>
           <p>
             Description of File system here
           </p>
