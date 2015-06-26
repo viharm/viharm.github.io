@@ -2,135 +2,581 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="Lib/Style.inc.css" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="Lib/Ui/Style.inc.css" />
     <meta name="description" content="A library of coding standards" />
     <meta name="author" content="viharm" />
     <link rel="icon" type="image/x-icon" href="http://www.gravatar.com/avatar/ad7949dd6f25efe46f3dd10cba9b91fa?s=16" />
-    <title>viharm</title>
-
+    <title>Coding standards | viharm</title>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <div class="container-fluid" id="dv_DocBody">
       <div id="dv_PageHeader">
-        <div class="panel panel-default">
+        <div class="panel panel-default cl_ViharmBg">
           <div class="panel-body">
-            <h1>viharm
-            <a href="/"><img class="cs_Banner img-responsive pull-right" src="http://www.gravatar.com/avatar/ad7949dd6f25efe46f3dd10cba9b91fa" alt="viharm" title="{viharm" /></a>
-            </h1>
+            <a href="/"><img class="cl_Banner img-responsive center-block" src="http://www.gravatar.com/avatar/ad7949dd6f25efe46f3dd10cba9b91fa" alt="viharm" title="viharm" /></a>
           </div>
         </div>
       </div>
-      <div id="div__PageNav">
+      <div id="dv_PageNav">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nv_Page">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+              </button>
+              <a class="navbar-brand" href="index.html">
+                Coding standards
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="nv_Page">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="#id_Concepts">
+                    <span class="glyphicon glyphicon-tower"></span>
+                    Concepts
+                  </a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-bookmark"></span> Organisation <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#id_Files">
+                        <span class="glyphicon glyphicon-duplicate"></span>
+                        Files
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#id_Layout">
+                        <span class="glyphicon glyphicon-th-large"></span>
+                        Layout
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span> Architecture <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#id_Formatting">
+                        <span class="glyphicon glyphicon-indent-left"></span>
+                        Formatting
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#id_Semantics">
+                        <span class="glyphicon glyphicon-barcode"></span>
+                        Semantics
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-gift"></span> Delivery <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#id_Documenting">
+                        <span class="glyphicon glyphicon-book"></span>
+                        Documenting
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#id_Packaging">
+                        <span class="glyphicon glyphicon-compressed"></span>
+                        Packaging
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
-      <div id="div__PageBody">
-        <div class="jumbotron" id="id_Intro">
-          <h1>The wannabe geek!</h1>
-        </div>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <a href="https://gitlab.com/u/viharm" target="_blank">
-                    <p class="text-center">
-                      <span class="glyphicon glyphicon-folder-close"></span>
-                      GitLab profile
-                    </p>
+      <div id="dv_PageBody">
+        <section id="id_Intro">
+          <p class="lead">This document describes best practices for creating software.</p>
+          <p>It is well known that some programming languages have specific requirements both presentational and functional; while others have a relaxed approach toward presentation.</p>
+          <p>The recommendations made here endeavour to create a set of best practices to suit as many languages as possible to maintain consistency in structure, semantics and layout.</p>
+          <div class="alert alert-warning" role="alert">
+            <span class="glyphicon glyphicon-alert"></span>
+            This document is currently under development and various sections are incomplete.
+          </div>
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-bullhorn"></span>
+            Suggestions are welcome. Simply create a new <a class="alert-link" href="https://github.com/viharm/viharm.github.io/issues" target="_blank">issue</a> at GitHub
+          </div>
+        </section>
+        <section id="id_Concepts">
+          <a href="#dv_PageNav" alt="Top of page" title="Top of page">
+            <span class="glyphicon glyphicon-chevron-up pull-right btn btn-default btn-xs"></span>
+          </a>
+          <h3>Concepts  <span class="label label-default">to do</span></h3>
+          <p>
+            Fundamental concepts
+          </p>
+          <h4>Library <span class="label label-default">to do</span></h4>
+          <p>
+            Library of assets, further categorised into types.
+          </p>
+          <h5>UI elements</h5>
+          <h5>Operational elements</h5>
+          <p>
+            Reusable code
+          </p>
+          <h4>Modules <span class="label label-default">to do</span></h4>
+          <p>
+            Modular applications.
+          </p>
+          <p>
+            Difference between module, extension, plugin, etc.
+          </p>
+        </section>
+        <section id="id_Files">
+          <a href="#dv_PageNav" alt="Top of page" title="Top of page">
+            <span class="glyphicon glyphicon-chevron-up pull-right btn btn-default btn-xs"></span>
+          </a>
+          <h3>Files <span class="label label-warning">draft</span></h3>
+          <p>
+            Description of files here
+          </p>
+          <dl class="dl-horizontal">
+            <dt>LICENSE</dt>
+            <dd>A plain text file containing the licence with the name of the copyright holder</dd>
+          </dl>
+          <dl class="dl-horizontal">
+            <dt>VERSION</dt>
+            <dd>
+              <p>A plain text file containing the version number of the package.</p>
+              <div class="alert alert-info" role="alert">
+                Use of <a class="aler-link" href="http://semver.org/" target ="_blank">semantic versioning</a> is highly encouraged.
+              </div>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal">
+            <dt>Quickstart</dt>
+            <dd>
+              <p>A plain text file containing a brief guide to get started.</p>
+              <p>This is typically the <code>README.md</code> file in most packages. If the application is small then this may contain the complete documentation.</p>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal">
+            <dt>Code</dt>
+            <dd>
+              <p>Files and folders as per the structure of the software/library</p>
+              <p>Use of the directory structure described later is highly encouraged.</p>
+            </dd>
+          </dl>
+          <p>
+            Directory layout of different applications and packages vary however the approach used is very similar.
+          </p>
+          <ul>
+            <li>LICENSE</li>
+            <li>VERSION</li>
+            <li>
+              Conf
+              <ul>
+                <li>Conf_App.inc.ext</li>
+                <li>Conf_Plugin.inc.ext</li>
+                <li>...</li>
+              </ul>
+            </li>
+            <li>
+              Lib
+              <ul>
+                <li>Common.function.inc.php</li>
+                <li>Specific.class.inc.php</li>
+                <li>...</li>
+              </ul>
+            </li>
+            <li>
+              Module
+              <ul>
+                <li>
+                  Render_Smarty
+                  <ul>
+                    <li>Render_Smarty.plugin.inc.php</li>
+                  <li>...</li>
+                  </ul>
+                </li>
+                <li>
+                  Scraper_Tvdb
+                  <ul>
+                    <li>Scraper_Tvdb.plugin.inc.php</li>
+                    <li>...</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section id="id_Layout">
+          <a href="#dv_PageNav" alt="Top of page" title="Top of page">
+            <span class="glyphicon glyphicon-chevron-up pull-right btn btn-default btn-xs"></span>
+          </a>
+          <h3>Layout <span class="label label-default">to do</span></h3>
+          <p>
+            Typical structure of a file. Variable declarations, function definitions, etc.
+          </p>
+        </section>
+        <section id="id_Formatting">
+          <a href="#dv_PageNav" alt="Top of page" title="Top of page">
+            <span class="glyphicon glyphicon-chevron-up pull-right btn btn-default btn-xs"></span>
+          </a>
+          <h3>Formatting <span class="label label-danger">wip</span></h3>
+          <p>
+            Description of formatting here
+          </p>
+          <ul>
+            <li>80 columns wide lines is a generic viewport</li>
+          </ul>
+          <h4>Whitespace</h4>
+          <p>
+            Liberal but optimal use of whitespace, both horizontal and vertical.
+          </p>
+          <h5>Horizontal</h5>
+          <h6>Indent</h6>
+          <p>
+            Indenting code is essential to cleanly convey the logic and approach used in developing the application. The exception to this is the formatting restrictions imposed by the language used to write the code.
+          </p>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_LogicalIndent">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_LogicalIndent" aria-controls="id_Cp_LogicalIndent">
+                    Logical indentation : 2-character soft tabs
                   </a>
+                </h4>
+              </div>
+              <div id="id_Cp_LogicalIndent" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_LogicalIndent">
+                <div class="panel-body">
+                  <p>Logical indentation refers to the indentation used in the code to depict logical hierarchy; e.g., nested loops, functions, classes and methods.</p>
+                  <p>This is unambiguous and provides a clear view of the hierarchy. There are however certain descretions that can be taken to ensure clean code. These descretions are in cases were hierarchical child objects are small enough to need a line for themselves, hence included in the same line as their heirarchical parent, as shown in the following example of a single line of repeating code in <i>PHP</i> which also contributes to the modular approach.</p>
+                  <pre>fn_Debug($sr_Check){echo('&lt;pre&gt;'.$sr_Check.'&lt;/pre&gt;');}</pre>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <a href="https://bitbucket.org/viharm" target="_blank">
-                    <p class="text-center">
-                      <span class="glyphicon glyphicon-folder-close"></span>
-                      BitBucket profile
-                    </p>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_OverflowIndent">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_OverflowIndent" aria-controls="id_Cp_OverflowIndent">
+                    Overflow indentation : Hanging indent using contextual width or 2-character soft tabs
                   </a>
-                </div>
+                </h4>
               </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="panel panel-default">
+              <div id="id_Cp_OverflowIndent" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_OverflowIndent">
                 <div class="panel-body">
-                  <a href="https://github.com/viharm?tab=repositories" target="_blank">
-                    <p class="text-center">
-                      <span class="glyphicon glyphicon-folder-close"></span>
-                      GitHub Repositories
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <a href="coding">
-                    <p class="text-center">
-                      <span class="glyphicon glyphicon-list-alt"></span>
-                      Coding standards
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <a href="http://coderstats.net/github/viharm/" target="_blank">
-                    <p class="text-center">
-                      <span class="glyphicon glyphicon-stats"></span>
-                      Stats (GitHub only)
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <a href="https://www.coinbase.com/viharm#tab2" target="_blank">
-                    <p class="text-center">
-                      <span class="glyphicon glyphicon-bitcoin"></span>
-                      Donate Bitcoin
-                    </p>
-                  </a>
+                  <p>Overflow indentation refers to the hanging indentation used in the code to depict continuation of a statement from a previous line. This is primarily done to ensure that the overall width of lines does not exceed the conservative 80-character width of the generic view port</p>
+                  <p>There are two alternatives to clean represent such continuation.</p>
+                  <div class="list-group">
+                    <div class="list-group-item">
+                      <h4 class="list-group-item-heading">Contextual hanging indent</h4>
+                      <p class="list-group-item-text">Width of indentation in this case is decided by the point at which the item continued on the new line is started; shown by the following example</p>
+                      <pre><code>if ( !array_key_exists ( 'ky_LdapVer' , $this->ar_Dir['ky_Conf'] ) |<br />     $this->ar_Dir['ky_Conf']['ky_LdapVer'] == ''<br />     ) {<br />  $this->ar_Dir['ky_Conf']['ky_LdapVer'] = 3 ;<br />}</code></pre>
+                    </div>
+                    <div class="list-group-item">
+                      <h4 class="list-group-item-heading">Fixed hanging indent</h4>
+                      <p class="list-group-item-text">Width of indentation in this case is decided by the chosen width used for global logical indentation; shown by the following example. In this case the continued code on the overflow line is treated as a heirarchical child of the line on which the overflowing statement started.</p>
+                      <pre><code>if ( !array_key_exists ( 'ky_LdapVer' , $this->ar_Dir['ky_Conf'] ) |<br />  $this->ar_Dir['ky_Conf']['ky_LdapVer'] == ''<br />  ) {<br />  $this->ar_Dir['ky_Conf']['ky_LdapVer'] = 3 ;<br />}</code></pre>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+          <h6>Intra-line space</h6>
+          <h5>Vertical</h5>
+        </section>
+        <section id="id_Semantics">
+          <a href="#dv_PageNav" alt="Top of page" title="Top of page">
+            <span class="glyphicon glyphicon-chevron-up pull-right btn btn-default btn-xs"></span>
+          </a>
+          <h3>Semantics <span class="label label-danger">wip</span></h3>
+          <p>
+            Coding semantics play an important role in making the entire code consistent. If this practice is applied across teams and languages, Large pieces of code can be easily understood. Various aspects of coding fall under semantics; these can be logical variables, values, database tables, fields or even filesystem objects like files and directories. For the purpose of this document, each of these aspect will be referred to as an <i>item</i>.
+          </p>
+          <h4>Formulation <span class="label label-warning">draft</span></h4>
+          <p>
+            The semantic formulation of an item name involves splitting it into two distinct parts.
+          </p>
+          <dl class="dl-horizontal">
+            <dt>Type prefix</dt>
+            <dd>A two character prefix indicating the type of item </dd>
+            <dt>Item name</dt>
+            <dd>Rational name of the item</dd>
+          </dl>
+            
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h5 class="panel-title">Type prefix</h5>
+                  </div>
+                  <div class="panel-body">
+                    Two characters, both lower case, describing the type of item, variable or object. Two characters provide 676 unique combinations, so should be plenty. Selection of these two characters is made by using the first two consonants in the type name. If already used, then the first and the third, and so on.
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h5 class="panel-title">Item name</h5>
+                  </div>
+                  <div class="panel-body">
+                    A short but descriptive name of the item, variable or object. Avoid abbreviations and standard names from language documentation. Use CamelCase for multi-word names. Use shorter forms of common words.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4>Examples <span class="label label-danger">wip</span></h4>
+          <p>
+            The following examples illustrate the formulation of an item name/reference.
+          </p>
+          <h5>Logic <span class="label label-warning">draft</span></h5>
+          <p>
+            Logic items include variables, objects and logic routines like classes, functions, methods and objects.
+          </p>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Nm">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Nm" aria-controls="id_Cp_Nm">
+                    <code>nm_</code>... : Number
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Nm" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Nm">
+                <div class="panel-body">
+                  Numerical variable (integer, float, etc.) 
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Bl">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Bl" aria-controls="id_Cp_Bl">
+                    <code>bl_</code>... : Boolean
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Bl" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Bl">
+                <div class="panel-body">
+                  Boolean variable (true/false, yes/no, 1/0, etc. )
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Sr">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Sr" aria-controls="id_Cp_Sr">
+                    <code>sr_</code>... : String
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Sr" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Sr">
+                <div class="panel-body">
+                  String variable (including numeric characters)
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Ag">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Ag" aria-controls="id_Cp_Ag">
+                    <code>ag_</code>... : Argument
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Ag" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Ag">
+                <div class="panel-body">
+                  Argument supplied to a function/method
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Rt">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Rt" aria-controls="id_Cp_Rt">
+                    <code>rt_</code>... : Return
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Rt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Rt">
+                <div class="panel-body">
+                  Return variable (all types including arrays, integer, float, etc.) 
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Ar">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Ar" aria-controls="id_Cp_Ar">
+                    <code>ar_</code>... : Array
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Ar" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Ar">
+                <div class="panel-body">
+                  Array variable (both associative and non-associative)
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Ky">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Ky" aria-controls="id_Cp_Ky">
+                    <code>ky_</code>... : Array key
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Ky" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Ky">
+                <div class="panel-body">
+                  Key for arrays (specifically for associative types).
+                  <br />
+                  There is still a question whether all arrays should be prefixed with <code>ky_</code> or with the type of variable they are. This is open for discussion.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Fn">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Fn" aria-controls="id_Cp_Fn">
+                    <code>fn_</code>... : Function
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Fn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Fn">
+                <div class="panel-body">
+                  Function or method
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Cl">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Cl" aria-controls="id_Cp_Cl">
+                    <code>cl_</code>... : Class
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Cl" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Cl">
+                <div class="panel-body">
+                  Class definitions
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Ob">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Ob" aria-controls="id_Cp_Ob">
+                    <code>ob_</code>... : Object
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Ob" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Ob">
+                <div class="panel-body">
+                  Object instance of class
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Vr">
+  	            <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#id_Cp_Vr" aria-controls="id_Cp_Vr">
+                    <code>vr_</code>... : Unspecified
+                  </a>
+                </h4>
+              </div>
+              <div id="id_Cp_Vr" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Vr">
+                <div class="panel-body">
+                  Unspecified variable type or category.
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5>User interface <span class="label label-default">to do</span></h5>
+          <p>
+            Description of UI here
+          </p>
+          <h5>Databases <span class="label label-default">to do</span></h5>
+          <p>
+            Description of Databases here
+          </p>
+          <h5>File system <span class="label label-default">to do</span></h5>
+          <p>
+            Description of File system here
+          </p>
+        </section>
+        <section id="id_Documenting">
+          <a href="#dv_PageNav" alt="Top of page" title="Top of page">
+            <span class="glyphicon glyphicon-chevron-up pull-right btn btn-default btn-xs"></span>
+          </a>
+          <h3>Documenting <span class="label label-default">to do</span></h3>
+          <p>
+            Description of documenting here
+          </p>
+        </section>
+        <section id="id_Packaging">
+          <a href="#dv_PageNav" alt="Top of page" title="Top of page">
+            <span class="glyphicon glyphicon-chevron-up pull-right btn btn-default btn-xs"></span>
+          </a>
+          <h3>Packaging <span class="label label-default">to do</span></h3>
+          <p>
+            Description of Packaging here
+          </p>
+        </section>
+        <section id="id_ExtLinks">
+          <h3>Related  <span class="label label-warning">draft</span></h3>
+          <h4>Drupal PHP coding standards</h4>
+          <p>
+            There is also a good document at <a href="drupal.org" target="_blank">drupal.org</a> for...
+          </p>
+          <ul>
+            <li><a href="https://www.drupal.org/coding-standards" target="_blank">PHP coding standards</a></li>
+            <li><a href="https://www.drupal.org/writing-secure-code" target="_blank">Security</a></li>
+          </ul>
+          <h4>GNU coding standards</h4>
+            <p>The GNU project specifies <a class="alert-link" href="https://www.gnu.org/prep/standards/standards.html" target="_blank">coding standards</a> for GNU programs.</p>
+            <p>Although these standards allude to programs mainly written in the C language, some of the disciplinary aspects of these standards are relevant to those covered in this documents.</p>
+        </section>
       </div>
-      <div id="div__PageFooter">
+      <div id="dv_PageFooter">
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                  Copyright &copy; 2015, viharm. All rights reserved.
+                  Copyright &copy; 2015, viharm, under the
+                  <a href="LICENSE" target="_blank">
+                    BSD Documentation License
+                  </a>
                 </div>
                 <div class="col-xs-12 col-sm-6">
+                  <a href="LICENSE" target="_blank">
+                    <img class="pull-right cl_Badge" src="https://upload.wikimedia.org/wikipedia/en/5/55/Bsd_daemon.jpg" alt="BDL" title="BDL" />
+                  </a>
                   <a href="http://validator.w3.org/check?uri=referer" target="_blank">
-                    <img class="cl_Badge pull-right" src="Lib/html5.footer.badge.png" alt="HTML 5" title="Valid HTML 5" />
+                    <img class="cl_Badge pull-right" src="Lib/Ui/html5.footer.badge.png" alt="HTML 5" title="Valid HTML 5" />
                   </a>
                   <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
-                    <img class="pull-right" src="Lib/css3.footer.badge.png" alt="CSS 3" title="CSS 3" />
+                    <img class="pull-right" src="Lib/Ui/css3.footer.badge.png" alt="CSS 3" title="CSS 3" />
                   </a>
                   <a href="http://http://getbootstrap.com" target="_blank">
                     <img class="pull-right cl_Badge" src="http://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="Bootstrap" title="Bootstrap" />
                   </a>
                   <a href="https://pages.github.com/" target="_blank">
-                    <img class="pull-right" src="Lib/github.footer.badge.png" alt="GitHub Pages" title="GitHub Pages" />
+                    <img class="pull-right" src="Lib/Ui/github.footer.badge.png" alt="GitHub Pages" title="GitHub Pages" />
                   </a>
                 </div>
               </div>
@@ -139,5 +585,10 @@
         </div>
       </div>
     </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
