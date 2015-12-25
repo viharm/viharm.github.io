@@ -179,45 +179,56 @@
           <p>
             Directory layout of different applications and packages vary however the approach used is very similar.
           </p>
-          <ul>
-            <li>LICENSE</li>
-            <li>VERSION</li>
-            <li>
-              Conf
-              <ul>
-                <li>Conf_App.inc.ext</li>
-                <li>Conf_Plugin.inc.ext</li>
-                <li>...</li>
-              </ul>
-            </li>
-            <li>
-              Lib
-              <ul>
-                <li>Common.function.inc.php</li>
-                <li>Specific.class.inc.php</li>
-                <li>...</li>
-              </ul>
-            </li>
-            <li>
-              Module
-              <ul>
+          <div class="panel panel-default">
+            <div class="panel-heading">Example directory structure</div>
+            <div class="panel-body">
+              <p class="cl_TreeRoot">Project directory</p>
+              <!-- 
+              <p>
+                <span class="label label-warning">Project directory</span>
+              </p>
+              -->
+              <ul class="cl_TreeList">
+                <li>LICENSE</li>
+                <li>VERSION</li>
                 <li>
-                  Render_Smarty
+                  Conf
                   <ul>
-                    <li>Render_Smarty.plugin.inc.php</li>
-                  <li>...</li>
-                  </ul>
-                </li>
-                <li>
-                  Scraper_Tvdb
-                  <ul>
-                    <li>Scraper_Tvdb.plugin.inc.php</li>
+                    <li>Conf_App.inc.ext</li>
+                    <li>Conf_Plugin.inc.ext</li>
                     <li>...</li>
                   </ul>
                 </li>
+                <li>
+                  Lib
+                  <ul>
+                    <li>Common.function.inc.php</li>
+                    <li>Specific.class.inc.php</li>
+                    <li>...</li>
+                  </ul>
+                </li>
+                <li>
+                  Module
+                  <ul>
+                    <li>
+                      Render_Smarty
+                      <ul>
+                        <li>Render_Smarty.module.inc.php</li>
+                      <li>...</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Scraper_Tvdb
+                      <ul>
+                        <li>Scraper_Tvdb.module.inc.php</li>
+                        <li>...</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
         </section>
         <section id="id_Layout">
           <a href="#dv_PageNav" title="Top of page">
@@ -275,7 +286,7 @@
               </div>
               <div id="id_Cp_OverflowIndent" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_OverflowIndent">
                 <div class="panel-body">
-                  <p>Overflow indentation refers to the hanging indentation used in the code to depict continuation of a statement from a previous line. This is primarily done to ensure that the overall width of lines does not exceed the conservative 80-character width of the generic view port</p>
+                  <p>Overflow indentation refers to the hanging indentation used in the code to depict continuation of a statement from the preceding line. This is primarily done to ensure that the overall width of lines does not exceed the conservative 80-character width of the generic view port</p>
                   <p>There are two alternatives to clean represent such continuation.</p>
                   <div class="list-group">
                     <div class="list-group-item">
@@ -572,7 +583,7 @@
                   <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
                     <img class="pull-right" src="Lib/Ui/css3.footer.badge.png" alt="CSS 3" title="CSS 3" />
                   </a>
-                  <a href="http://http://getbootstrap.com" target="_blank">
+                  <a href="http://getbootstrap.com" target="_blank">
                     <img class="pull-right cl_Badge" src="http://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="Bootstrap" title="Bootstrap" />
                   </a>
                   <a href="https://pages.github.com/" target="_blank">
