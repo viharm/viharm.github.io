@@ -9,7 +9,7 @@
     <meta name="description" content="A library of coding standards" />
     <meta name="author" content="viharm" />
     <link rel="icon" type="image/x-icon" href="https://www.gravatar.com/avatar/ad7949dd6f25efe46f3dd10cba9b91fa?s=16" />
-    <title>Coding standards | viharm</title>
+    <title>Coding standard | viharm</title>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -36,7 +36,7 @@
                 <span class="icon-bar"></span> 
               </button>
               <a class="navbar-brand" href="index.html">
-                Coding standards
+                Coding standard
               </a>
             </div>
             <div class="collapse navbar-collapse" id="nv_Page">
@@ -84,6 +84,12 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-gift"></span> Delivery <span class="caret"></span></a>
                   <ul class="dropdown-menu">
+                    <li>
+                      <a href="#id_Testing">
+                        <span class="glyphicon glyphicon-check"></span>
+                        Testing
+                      </a>
+                    </li>
                     <li>
                       <a href="#id_Documenting">
                         <span class="glyphicon glyphicon-book"></span>
@@ -251,12 +257,12 @@
           <ul>
             <li>80 columns wide lines is a generic viewport</li>
           </ul>
-          <h4>Whitespace</h4>
+          <h4>Whitespace <span class="label label-danger">wip</span></h4>
           <p>
             Liberal but optimal use of whitespace, both horizontal and vertical.
           </p>
-          <h5>Horizontal</h5>
-          <h6>Indent</h6>
+          <h5>Horizontal <span class="label label-danger">wip</span></h5>
+          <h6>Indent <span class="label label-warning">draft</span></h6>
           <p>
             Indenting code is essential to cleanly convey the logic and approach used in developing the application. The exception to this is the formatting restrictions imposed by the language used to write the code.
           </p>
@@ -305,18 +311,18 @@
               </div>
             </div>
           </div>
-          <h6>Intra-line space</h6>
-          <h5>Vertical</h5>
+          <h6>Intra-line space <span class="label label-default">to do</span></h6>
+          <h5>Vertical <span class="label label-default">to do</span></h5>
         </section>
         <section id="id_Semantics">
           <a href="#dv_PageNav" title="Top of page">
             <span class="glyphicon glyphicon-chevron-up pull-right btn btn-default btn-xs"></span>
           </a>
-          <h3>Semantics <span class="label label-danger">wip</span></h3>
+          <h3>Semantics <span class="label label-warning">draft</span></h3>
           <p>
             Coding semantics play an important role in making the entire code consistent. If this practice is applied across teams and languages, Large pieces of code can be easily understood. Various aspects of coding fall under semantics; these can be logical variables, values, database tables, fields or even filesystem objects like files and directories. For the purpose of this document, each of these aspect will be referred to as an <i>item</i>.
           </p>
-          <h4>Formulation <span class="label label-warning">draft</span></h4>
+          <h4>Formulation</h4>
           <p>
             The semantic formulation of an item name involves splitting it into two distinct parts.
           </p>
@@ -351,22 +357,22 @@
               </div>
             </div>
           </div>
-          <h4>Examples <span class="label label-danger">wip</span></h4>
+          <h4>Examples</h4>
           <p>
-            The following examples illustrate the formulation of an item name/reference.
+            The following examples illustrate the formulation of an item name/reference in various contexts.
           </p>
-          <h5>Logic <span class="label label-warning">draft</span></h5>
+          <h5>Logic</h5>
           <p>
             Logic items include variables, objects and logic routines like classes, functions, methods and objects.
           </p>
           <div class="panel-group" id="accordion_Semantic_Logic" role="tablist" aria-multiselectable="true">
   	        <div class="panel panel-default">
   	          <div class="panel-heading" role="tab" id="id_Hd_Nm">
-  	            <h4 class="panel-title">
+  	            <h6 class="panel-title">
                   <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Logic" href="#id_Cp_Nm" aria-controls="id_Cp_Nm">
                     <code>nm_</code>... : Number
                   </a>
-                </h4>
+                </h6>
               </div>
               <div id="id_Cp_Nm" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Nm">
                 <div class="panel-body">
@@ -517,26 +523,368 @@
               </div>
             </div>
           </div>
-          <h5>User interface <span class="label label-default">to do</span></h5>
+          <h5>User interface</h5>
           <p>
-            Description of UI here
+            User interface items include UI elements, frames, buttons and other hidden elements like <code>div</code> elements.
           </p>
-          <h5>Databases <span class="label label-default">to do</span></h5>
+          <div class="panel-group" id="accordion_Semantic_Interface" role="tablist" aria-multiselectable="true">
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Bt">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Bt" aria-controls="id_Cp_Bt">
+                    <code>bt_</code>... : Button
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Bt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Bt">
+                <div class="panel-body">
+                  Button, either aesthetic or for forms.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Tx">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Tx" aria-controls="id_Cp_Tx">
+                    <code>tx_</code>... : Text box/field
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Tx" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Tx">
+                <div class="panel-body">
+                  Text box or field for forms.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Lb">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Lb" aria-controls="id_Cp_Lb">
+                    <code>lb_</code>... : Label
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Lb" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Lb">
+                <div class="panel-body">
+                  Label elements.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Ck">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Ck" aria-controls="id_Cp_Ck">
+                    <code>ck_</code>... : Checkbox
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Ck" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Ck">
+                <div class="panel-body">
+                  Check box element.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Rd">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Rd" aria-controls="id_Cp_Rd">
+                    <code>rd_</code>... : Radio button
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Rd" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Rd">
+                <div class="panel-body">
+                  Radio button element.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Tb">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Tb" aria-controls="id_Cp_Tb">
+                    <code>tb_</code>... : Tabbed section container
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Tb" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Tb">
+                <div class="panel-body">
+                  Tabbed section container.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Tp">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Tp" aria-controls="id_Cp_Tp">
+                    <code>tp_</code>... : Tab page
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Tp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Tp">
+                <div class="panel-body">
+                  Tab page (usually inside a tabbed section container).
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Dv">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Dv" aria-controls="id_Cp_Dv">
+                    <code>dv_</code>... : Division (div)
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Dv" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Dv">
+                <div class="panel-body">
+                  Division (div) element, usually found in HTML.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Mg">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Mg" aria-controls="id_Cp_Mg">
+                    <code>mg_</code>... : Image
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Mg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Mg">
+                <div class="panel-body">
+                  Image element.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Ln">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Ln" aria-controls="id_Cp_Ln">
+                    <code>ln_</code>... : Link
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Ln" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Ln">
+                <div class="panel-body">
+                  Link element. This could be reference to a symbolic link, its container or a URL.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Cb">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Cb" aria-controls="id_Cp_Cb">
+                    <code>cb_</code>... : Combo box
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Cb" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Cb">
+                <div class="panel-body">
+                  Combo box, usually rendered as an on-demand drop-down list.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Rp">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Rp" aria-controls="id_Cp_Rp">
+                    <code>rp_</code>... : Report
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Rp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Rp">
+                <div class="panel-body">
+                  Depending on the application environment and the coding language used, this could be reference to a file, sub-routine or a sub-system relating to reporting.
+                  <br />
+                  In database programming, this could be a saved report template.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Fr">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Interface" href="#id_Cp_Fr" aria-controls="id_Cp_Fr">
+                    <code>fr_</code>... : Frame
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Fr" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Fr">
+                <div class="panel-body">
+                  Frame could refer either a container for other UI elements or a sectioned division of the rendered viewport.
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5>Databases</h5>
           <p>
-            Description of Databases here
+            Database include databases, users, tables, fields, etc.
           </p>
-          <h5>File system <span class="label label-default">to do</span></h5>
+          <div class="panel-group" id="accordion_Semantic_Database" role="tablist" aria-multiselectable="true">
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Db">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Database" href="#id_Cp_Db" aria-controls="id_Cp_Db">
+                    <code>db_</code>... : Database
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Db" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Db">
+                <div class="panel-body">
+                  Database reference.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Us">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Database" href="#id_Cp_Us" aria-controls="id_Cp_Us">
+                    <code>us_</code>... : User
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Us" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Us">
+                <div class="panel-body">
+                  User, also usable in non-database context.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Pw">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Database" href="#id_Cp_Pw" aria-controls="id_Cp_Pw">
+                    <code>pw_</code>... : Password
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Pw" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Pw">
+                <div class="panel-body">
+                  Database password, also can be utilised elsewhere.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Tl">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Database" href="#id_Cp_Tl" aria-controls="id_Cp_Tl">
+                    <code>tl_</code>... : Table
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Tl" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Tl">
+                <div class="panel-body">
+                  Table, also can be used for interface elements rendered as tables.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Fd">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Database" href="#id_Cp_Fd" aria-controls="id_Cp_Fd">
+                    <code>fd_</code>... : Field
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Fd" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Fd">
+                <div class="panel-body">
+                  Database fields.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Jc">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Database" href="#id_Cp_Jc" aria-controls="id_Cp_Jc">
+                    <code>jc_</code>... : Junction
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Jc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Jc">
+                <div class="panel-body">
+                  Junction or map tables (commonly used for many-to-many relationships in RDBMS).
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Lk">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Database" href="#id_Cp_Lk" aria-controls="id_Cp_Lk">
+                    <code>lk_</code>... : Lookups
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Lk" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Lk">
+                <div class="panel-body">
+                  Lookups (usually tables).
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Qy">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Database" href="#id_Cp_Qy" aria-controls="id_Cp_Qy">
+                    <code>qy_</code>... : Query
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Qy" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Qy">
+                <div class="panel-body">
+                  Database queries.
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5>File system</h5>
           <p>
-            Description of File system here
+            Filesystem items include objects like files, directories, sockets, PID files, etc.
+          </p>
+          <div class="panel-group" id="accordion_Semantic_Filesystem" role="tablist" aria-multiselectable="true">
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Fl">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Filesystem" href="#id_Cp_Fl" aria-controls="id_Cp_Fl">
+                    <code>fl_</code>... : File
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Fl" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Fl">
+                <div class="panel-body">
+                  File object, used to reference or to store paths to file objects.
+                </div>
+              </div>
+            </div>
+  	        <div class="panel panel-default">
+  	          <div class="panel-heading" role="tab" id="id_Hd_Dr">
+  	            <h6 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_Semantic_Filesystem" href="#id_Cp_Dr" aria-controls="id_Cp_Dr">
+                    <code>dr_</code>... : Directory
+                  </a>
+                </h6>
+              </div>
+              <div id="id_Cp_Dr" class="panel-collapse collapse" role="tabpanel" aria-labelledby="id_Hd_Dr">
+                <div class="panel-body">
+                  Directory object, used to reference or to store directory paths.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="id_Testing">
+          <a href="#dv_PageNav" title="Top of page">
+            <span class="glyphicon glyphicon-chevron-up pull-right btn btn-default btn-xs"></span>
+          </a>
+          <h3>Testing <span class="label label-default">to do</span></h3>
+          <p>
+            Description of testing here
           </p>
         </section>
         <section id="id_Documenting">
           <a href="#dv_PageNav" title="Top of page">
             <span class="glyphicon glyphicon-chevron-up pull-right btn btn-default btn-xs"></span>
           </a>
-          <h3>Documenting <span class="label label-default">to do</span></h3>
+          <h3>Documenting <span class="label label-danger">wip</span></h3>
           <p>
-            Description of documenting here
+            Documentation of both code is essential for clean, collaborative and scalable code.
+          </p>
+          <p>
+            Similarly documentation of the application is essential for mapping usability and functionality to the functional logic and critically, the caveats. It is due to such caveats that the best practice is to document the code concurrent to coding and testing.
           </p>
         </section>
         <section id="id_Packaging">
