@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Pompiere);
+
 .cl_Badge {
   max-height : 32px ;
 }
@@ -6,11 +8,24 @@
   background-color : #D4E8D4 ;
 }
 
+.container-fluid .panel {
+  margin-top: 10px;
+}
 /* STYLE FOR TREE STRUCTURE */
 
 .cl_TreeRoot {
   color:#369;
   font-weight:bold;
+}
+
+.cl_Brand {
+  font-family: 'Pompiere', cursive;
+}
+
+@media (max-width:767px) {
+  .row .col-xs-12 {
+    text-align: center;
+  }
 }
 
 /**
