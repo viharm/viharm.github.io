@@ -82,3 +82,8 @@
   top:1em; /* (line-height/2) */
   bottom:0;
 }
+
+h2 , section>h3 , section>h4 , section>h5 , section>h6 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
