@@ -259,6 +259,100 @@
             Typical structure of a file. Variable declarations, function definitions, etc.
           </p>
         </section>
+        <section id="id_VarOrg">
+          <a href="#dv_PageNav" title="Top of page">
+            <span class="glyphicon glyphicon-triangle-top pull-right btn btn-default btn-xs"></span>
+          </a>
+          <h3>Variable organisation <span class="label label-danger">wip</span></h3>
+          <p>
+            As the development of a project progresses, the various mathematical steps, logical routines and control structures will inevitable leave behind a significant number of variables. This can result in considerable disorganisation of used and unused variables in memory. Unfortunately this variable &quot;spread&quot; cannot be predicted or planned before project kick-off, as most of the variables are a result of evolved development.
+          </p>
+          <p>
+            It is therefore essential to re-evaluate the organisation of variables to ensure they are controlled and organised, to ensure a tidy code structure.
+          </p>
+          <p>
+            Variables can be broadly organised into the following categories. Each of the categories may leverage the variable structure formulation of coding language used. The most typical of this is the array construct.
+          </p>
+          <dl>
+            <dt>Configuration</dt>
+            <dd>A collection of variables representing the configuration of the project/programme/code base.</dd>
+            <dt>State</dt>
+            <dd>A collection of variables representing the state of various aspects of the code base.</dd>
+            <dt>Response</dt>
+            <dd>A collection of variables representing response to an action so this may be handed off &lpar;redacted, if necessary&rpar;.</dd>
+          </dl>
+          <h4>Configuration variables</h4>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h5 class="panel-title">Static configuration</h5>
+                  </div>
+                  <div class="panel-body">
+                    Per instance. Install-time.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h5 class="panel-title">Dynamic configuration</h5>
+                  </div>
+                  <div class="panel-body">
+                    Per session. Run time
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h5 class="panel-title">Inactive configuration</h5>
+                  </div>
+                  <div class="panel-body">
+                    Run time configuration. Per page or per view
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h5 class="panel-title">Active configuration</h5>
+                  </div>
+                  <div class="panel-body">
+                    Run time configuration, actively changeable.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4>State variables</h4>
+          <p>This collection of variables can be utilised various aspects of the core code or modules to check the status or state of either configuration flags or any specific requirements</p>
+          <h4>Response variables</h4>
+          <p>This collection of variables can be utilised to store response or responses from functions, classes or other logic structures, so that the outcome of processing can be carried out in isolation.</p>
+          <h4>Other</h4>
+          There some additional variable collection which may be added by contexts
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h5 class="panel-title">UI</h5>
+                  </div>
+                  <div class="panel-body">
+                    A collection to hand-off to UI, especially in MVC-modelled codebases.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section id="id_Formatting">
           <a href="#dv_PageNav" title="Top of page">
             <span class="glyphicon glyphicon-triangle-top pull-right btn btn-default btn-xs"></span>
