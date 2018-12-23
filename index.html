@@ -283,6 +283,14 @@
           </dl>
           <h4>Configuration variables</h4>
           <p>Configuration variables represent the configuration of the application and can be organised either by the &quot;changeability&quot; of the configuration or by application architecture &lpar;modules, etc.&rpar;.</p>
+          <p>It always prefered to organise variables by logic, layout or architecture over their changeability, for the following reasons:</p>
+          <ul>
+            <li>Logical separation allows for efficient identification and management of data.</li>
+            <li>Modules can have all their data in one place. If variables are organised by changeability, then variables within similar logical contexts will need to be present in each changeability context, thus fragmenting the variable spread further.</li>
+            <li>Module writers need not have to manage their variables in multiple locations.</li>
+            <li>If the logic of the application changes and if the changeability of any variable is modified, then this will not need to be managed.</li>
+          </ul>
+          <p>Hence, &quot;<em>changeability</em>&quot; of variables will be referred to as variable scope. The following four broad scopes of variables are defined in this standard. These scope definitions are scalable and can be applied multiple times at various levels of the application, core, module or even secondary contexts like global and unit-level.</p>
           <div class="container-fluid">
             <div class="row">
               <div class="col-xs-12">
